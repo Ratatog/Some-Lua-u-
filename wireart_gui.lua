@@ -98,8 +98,6 @@ local non_correct_color = Color3.fromRGB(255, 0, 0) -- Wire color
 local min_scale = 1.0
 
 -- Controls --
--- Only these two global keyboard/mouse controls remain intentionally.
--- R = rotate preview, LMB = confirm/delete preview.
 local invert_horizontal_movement = true -- Invert X movement
 local invert_vertical_movement = false -- Invert Y movement
 local horizontal_movement_use_z = nil -- Swap X/Y movement
@@ -169,7 +167,7 @@ end
 local min_distance = 0.5
 local turn_skip_distance = 0.1
 local turn_soft_distance = 0.4
-local scale_ignore_distance = 0.05 -- for rescaling (skip less values)
+local scale_ignore_distance = 0.05
 local eps = 1e-6
 local length_eps = 1e-5
 local wire_max_margin = 0
@@ -238,8 +236,6 @@ local test_vectors = {
     {Vector3.new(3, 1, 9),Vector3.new(3, 1, 1),},{Vector3.new(3, 1, -1),Vector3.new(3, 1, -2),},
 }
 
--- Custom art entered in the Settings tab when My art is enabled.
--- Expected format is the same Lua table returned by an art URL.
 local my_art_text = ""
 local original_test_vectors = test_vectors
 
